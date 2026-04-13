@@ -109,7 +109,7 @@ export default function App() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-gray-300 leading-relaxed mb-8"
             >
-              <p className="text-gray-300 leading-relaxed mb-8">
+              <p className="text-gray-300 leading-relaxed mb-8 text-justify">
                 I am a fresh graduate in the IT field with a strong interest in web development.
 
                 I have experience working with ASP.NET Core, Laravel, and SQL Server, and I am currently learning React to build modern and interactive user interfaces.
