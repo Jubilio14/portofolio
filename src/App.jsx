@@ -479,6 +479,47 @@ export default function App() {
             </div>
           </motion.div>
 
+          {/* FRONTEND POS */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              show: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ scale: 1.03 }}
+            className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden mb-10"
+          >
+            <img 
+              src="/posfrontend.png"
+              className="w-full h-40 object-cover transition duration-300 hover:scale-110"
+            />
+
+            <div className="p-6">
+              <h3 className="text-lg font-semibold mb-2">POS Front End</h3>
+
+              <p className="text-gray-400 text-sm mb-3">
+                A modern web-based inventory and POS system built with React, 
+                featuring role-based access (Admin & Cashier), warehouse management, 
+                supplier transactions, and a complete cart-to-invoice workflow with a clean and interactive UI.
+              </p>
+
+              <p className="text-xs text-gray-500 mb-4">
+                React.js • Tailwind CSS • React Router • Local Storage
+              </p>
+
+              <div className="flex gap-3">
+                <a href="https://frontendpos-sigma.vercel.app" target="_blank"
+                  className="text-sm bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200">
+                  View
+                </a>
+
+                <a href="https://github.com/Jubilio14/FrontendPOS.git" target="_blank"
+                  className="text-sm border border-gray-600 px-3 py-1 rounded-md hover:border-white">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Laksana Catering */}
           <motion.div
             variants={{
@@ -505,12 +546,12 @@ export default function App() {
               </p>
 
               <div className="flex gap-3">
-                <a href="LINK_DEMO" target="_blank"
+                <a href="https://laksana.vercel.app/" target="_blank"
                   className="text-sm bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200">
                   View
                 </a>
 
-                <a href="LINK_GITHUB" target="_blank"
+                <a href="https://github.com/Jubilio14/Laksana.git" target="_blank"
                   className="text-sm border border-gray-600 px-3 py-1 rounded-md hover:border-white">
                   GitHub
                 </a>
