@@ -1,5 +1,6 @@
 import profile from "./assets/Foto Resmi Compress.jpg";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 function TechCard({ name, icon }) {
   return (
@@ -17,22 +18,70 @@ function TechCard({ name, icon }) {
   );
 }
 export default function App() {
+  
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="bg-black text-white min-h-screen">
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full bg-black border-b border-gray-800 z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-          <h1 className="text-lg font-semibold">Jubilio</h1>
+      <nav className="fixed top-0 left-0 w-full bg-black/90 backdrop-blur border-b border-gray-800 z-50">
 
-          <div className="space-x-6 text-sm">
+        <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+
+          {/* LOGO */}
+          <h1 className="text-lg font-semibold">
+            Jubilio
+          </h1>
+
+          {/* DESKTOP MENU */}
+          <div className="hidden md:flex space-x-6 text-sm">
             <a href="#home" className="hover:text-gray-400">Home</a>
             <a href="#about" className="hover:text-gray-400">About</a>
             <a href="#tech" className="hover:text-gray-400">Tech Stack</a>
             <a href="#project" className="hover:text-gray-400">Project</a>
             <a href="#contact" className="hover:text-gray-400">Contact</a>
           </div>
+
+          {/* HAMBURGER */}
+          <button
+            className="md:hidden flex flex-col gap-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span className="w-6 h-[2px] bg-white"></span>
+            <span className="w-6 h-[2px] bg-white"></span>
+            <span className="w-6 h-[2px] bg-white"></span>
+          </button>
+
         </div>
+
+        {/* MOBILE MENU */}
+        {menuOpen && (
+          <div className="md:hidden border-t border-gray-800 bg-black px-6 py-4 flex flex-col gap-4 text-sm">
+
+            <a href="#home" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
+
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+
+            <a href="#tech" onClick={() => setMenuOpen(false)}>
+              Tech Stack
+            </a>
+
+            <a href="#project" onClick={() => setMenuOpen(false)}>
+              Project
+            </a>
+
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+
+          </div>
+        )}
+
       </nav>
 
       {/* HERO */}
@@ -546,7 +595,7 @@ export default function App() {
               </p>
 
               <div className="flex gap-3">
-                <a href="https://laksana.vercel.app/" target="_blank"
+                <a href="https://www.laksanacatering.com/" target="_blank"
                   className="text-sm bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200">
                   View
                 </a>
