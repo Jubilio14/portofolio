@@ -175,7 +175,7 @@ export default function App() {
               className="flex justify-center gap-16 text-center mt-6"
             >
               <div>
-                <h3 className="text-3xl font-bold text-white">4</h3>
+                <h3 className="text-3xl font-bold text-white">5</h3>
                 <p className="text-gray-400 text-sm">Projects</p>
               </div>
 
@@ -249,6 +249,11 @@ export default function App() {
               name="Tailwind" 
               icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" 
             />
+
+            <TechCard 
+              name="Vue.js" 
+              icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" 
+            />
           </motion.div>
         </div>
 
@@ -291,6 +296,11 @@ export default function App() {
               name="C#" 
               icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" 
             />
+
+            <TechCard 
+              name="PHP" 
+              icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" 
+            />
           </motion.div>
         </div>
 
@@ -327,6 +337,11 @@ export default function App() {
             <TechCard 
               name="MySQL" 
               icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
+            />
+
+            <TechCard 
+              name="PostgreSQL" 
+              icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" 
             />
           </motion.div>
         </div>
@@ -456,7 +471,7 @@ export default function App() {
 
                 <div className="flex gap-4">
                   <a 
-                    href="LINK_DEMO_LU"
+                    href=""
                     target="_blank"
                     className="bg-white text-black px-4 py-2 rounded-md text-sm hover:bg-gray-200"
                   >
@@ -601,6 +616,50 @@ export default function App() {
                 </a>
 
                 <a href="https://github.com/Jubilio14/Laksana.git" target="_blank"
+                  className="text-sm border border-gray-600 px-3 py-1 rounded-md hover:border-white">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Attendly */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              show: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ scale: 1.03 }}
+            className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden mb-10"
+          >
+            <img 
+              src="/Attendly.png"
+              className="w-full h-40 object-cover transition duration-300 hover:scale-110"
+            />
+
+            <div className="p-6">
+              <h3 className="text-lg font-semibold mb-2">
+                Attendly
+              </h3>
+
+              <p className="text-gray-400 text-sm mb-3">
+                A full-stack employee attendance management system with role-based access 
+                for admins and employees. It includes check-in/check-out, attendance requests, 
+                automatic late detection, early checkout detection, monthly reports, Excel export, 
+                and mobile-first PWA support.
+              </p>
+
+              <p className="text-xs text-gray-500 mb-4">
+                Laravel • Vue.js • Inertia.js • Tailwind CSS • PostgreSQL
+              </p>
+
+              <div className="flex gap-3">
+                <a href="#" target="_blank"
+                  className="text-sm bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200">
+                  View
+                </a>
+
+                <a href="https://github.com/Jubilio14/attendly" target="_blank"
                   className="text-sm border border-gray-600 px-3 py-1 rounded-md hover:border-white">
                   GitHub
                 </a>
